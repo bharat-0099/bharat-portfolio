@@ -9,9 +9,8 @@ const NAV = ["About", "Experience", "Skills", "Projects", "Startup", "Education"
 
 const STATS = [
   { num: "3+", label: "Years Exp." },
-  { num: "5M+", label: "Events / Day" },
-  { num: "40%", label: "API Speedup" },
-  { num: "10K+", label: "Active Users" },
+  { num: "Tech Builder", label: "Tech" },
+ 
 ];
 
 const HIGHLIGHTS = [
@@ -333,7 +332,7 @@ function Hero({ onResumeOpen }) {
             <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", background: "linear-gradient(135deg,#00e5ff,#7c3aed)" }} />
             {/* Profile photo */}
             <div style={{ width: 88, height: 88, borderRadius: "50%", overflow: "hidden", border: "3px solid transparent", background: "linear-gradient(#111118,#111118) padding-box, linear-gradient(135deg,#00e5ff,#7c3aed) border-box", marginBottom: "1.2rem" }}>
-              <img src={PROFILE_IMG} alt="Bharat Chundru" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+             <img src={PROFILE_IMG} alt="Bharat Chundru" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
             </div>
             <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.05rem", fontWeight: 700, marginBottom: "0.25rem" }}>Bharat Chundru</h3>
             <p style={{ fontSize: "0.75rem", color: "#00e5ff", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "1.4rem" }}>AI Full Stack Engineer</p>
@@ -1023,29 +1022,12 @@ function Education() {
   );
 }
 
-/* ── CONNECT ─── */
-/*
-  EMAIL SETUP (EmailJS — free, no backend needed):
-  1. Go to https://www.emailjs.com and create a free account
-  2. Add a Gmail service (connect your bharatchundru1@gmail.com)
-  3. Create an email template with these variables:
-       {{from_name}}  {{from_email}}  {{service}}  {{message}}
-  4. Replace the three placeholder strings below with your real IDs
-     from the EmailJS dashboard → Account → API Keys & Services
-*/
+
 const EMAILJS_SERVICE_ID  = "service_dhgb0p7";   // e.g. "service_abc123"
 const EMAILJS_TEMPLATE_ID = "template_0tboyrn";  // e.g. "template_xyz789"
 const EMAILJS_PUBLIC_KEY  = "G9P37727JdhoddkNy";   // e.g. "aBcDeFgHiJkLmNoP"
 
-const SERVICES = [
-  "Full Stack Development",
-  "GenAI / AI Integration",
-  "API Design & Optimization",
-  "Cloud & DevOps (AWS)",
-  "Healthcare Tech Consulting",
-  "Code Review & Architecture",
-  "Other / Just Saying Hi",
-];
+
 
 function Connect() {
   const links = [
@@ -1055,7 +1037,7 @@ function Connect() {
     { icon: "📍", label: "Location", value: "Atlanta, GA", href: null, bg: "rgba(245,158,11,0.08)" },
   ];
 
-  const [form, setForm] = useState({ name: "", email: "", service: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("idle"); // idle | sending | success | error
   const [errors, setErrors] = useState({});
 
@@ -1064,7 +1046,6 @@ function Connect() {
     if (!form.name.trim()) e.name = "Name is required";
     if (!form.email.trim()) e.email = "Email is required";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Enter a valid email";
-    if (!form.service) e.service = "Please select a service";
     if (!form.message.trim()) e.message = "Message is required";
     return e;
   };
@@ -1090,7 +1071,6 @@ function Connect() {
           template_params: {
             from_name: form.name,
             from_email: form.email,
-            service: form.service,
             message: form.message,
             to_email: "bharatchundru1@gmail.com",
           },
@@ -1098,7 +1078,7 @@ function Connect() {
       });
       if (res.ok) {
         setStatus("success");
-        setForm({ name: "", email: "", service: "", message: "" });
+        setForm({ name: "", email: "",  message: "" });
       } else {
         setStatus("error");
       }
@@ -1196,7 +1176,7 @@ function Connect() {
                     <div>
                       <label style={labelStyle}>Your Name</label>
                       <input
-                        type="text" placeholder="Bharat Chundru"
+                        type="text" placeholder="Enter your Name"
                         value={form.name} onChange={e => handleChange("name", e.target.value)}
                         style={{ ...inputBase, borderColor: errors.name ? "#f87171" : "#2a2a3a" }}
                         onFocus={e => e.target.style.borderColor = "#00e5ff"}
@@ -1207,7 +1187,7 @@ function Connect() {
                     <div>
                       <label style={labelStyle}>Email Address</label>
                       <input
-                        type="email" placeholder="you@example.com"
+                        type="email" placeholder="Enter your Email"
                         value={form.email} onChange={e => handleChange("email", e.target.value)}
                         style={{ ...inputBase, borderColor: errors.email ? "#f87171" : "#2a2a3a" }}
                         onFocus={e => e.target.style.borderColor = "#00e5ff"}
@@ -1217,20 +1197,6 @@ function Connect() {
                     </div>
                   </div>
 
-                  {/* Service */}
-                  <div style={{ marginBottom: "1rem" }}>
-                    <label style={labelStyle}>Service Requested</label>
-                    <select
-                      value={form.service} onChange={e => handleChange("service", e.target.value)}
-                      style={{ ...inputBase, borderColor: errors.service ? "#f87171" : "#2a2a3a", cursor: "pointer", appearance: "none", backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6b8f' strokeWidth='1.5' fill='none' strokeLinecap='round'/%3E%3C/svg%3E")`, backgroundRepeat: "no-repeat", backgroundPosition: "right 1rem center" }}
-                      onFocus={e => e.target.style.borderColor = "#00e5ff"}
-                      onBlur={e => e.target.style.borderColor = errors.service ? "#f87171" : "#2a2a3a"}
-                    >
-                      <option value="" disabled style={{ background: "#0d0d15" }}>Select a service…</option>
-                      {SERVICES.map(s => <option key={s} value={s} style={{ background: "#0d0d15" }}>{s}</option>)}
-                    </select>
-                    {errors.service && <div style={errStyle}>{errors.service}</div>}
-                  </div>
 
                   {/* Message */}
                   <div style={{ marginBottom: "1.5rem" }}>
