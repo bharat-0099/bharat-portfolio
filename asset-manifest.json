@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/bharat-portfolio/static/js/main.147a224d.js",
+    "main.js": "/bharat-portfolio/static/js/main.a22c589b.js",
     "static/media/resume.pdf": "/bharat-portfolio/static/media/resume.3b278a78a00edb8b123e.pdf",
     "static/media/image.jpeg": "/bharat-portfolio/static/media/image.4e2d43775d691a95d4e9.jpeg",
     "index.html": "/bharat-portfolio/index.html",
-    "main.147a224d.js.map": "/bharat-portfolio/static/js/main.147a224d.js.map"
+    "main.a22c589b.js.map": "/bharat-portfolio/static/js/main.a22c589b.js.map"
   },
   "entrypoints": [
-    "static/js/main.147a224d.js"
+    "static/js/main.a22c589b.js"
   ]
 }
