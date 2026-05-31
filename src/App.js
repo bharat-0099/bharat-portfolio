@@ -88,15 +88,15 @@ const PROJECTS = [
     num: "03", accent: "#fbbf24",
     title: "Hewlett Packard Enterprise - virtual Software Enginnering project  ",
     desc: "Completed HPE's Software Engineering virtual job simulation on Forage — designing RESTful architecture, building a production-ready Java Spring Boot web server, and validating it with a comprehensive unit testing suite.",
-     metrics: ["RESTFUL Service Proposal - architecture design 7 Documentation", "Spring Boot web Server - HTTPS handling + JSON Data Upload","Unit Testing Suite - Validation, Performance, Reliability"],
-    stack: ["Java", "Spring Boot", "RESTAPI","JUnit", "Unit Testing"],
+    metrics: ["↑ 40% Faster APIs", "10K+ Users"],
+    stack: ["React", "Firebase", "Spring Boot", "REST API", "Maven"],
   },
   {
     num: "04", accent: "#34d399",
     title: "Banking Transaction Platform",
     desc: "Full-stack banking applications at Truist Bank with React/Redux frontends for transaction management and payment scheduling, backed by Spring Boot microservices processing millions of daily financial transactions.",
     metrics: ["RESTFUL Service Proposal - architecture design 7 Documentation", "Spring Boot web Server - HTTPS handling + JSON Data Upload","Unit Testing Suite - Validation, Performance, Reliability"],
-    stack: ["Java", "Spring Boot", "RESTAPI","JUnit", "Unit Testing"],
+    stack: ["Java", "Spring Boot", "RESTAPI","JUnit", "Unit"],
   },
 ];
 
