@@ -79,24 +79,24 @@ const PROJECTS = [
   },
   {
     num: "02", accent: "#a78bfa",
-    title: "Healthcare Events Kafka Platform",
-    desc: "Architected an event-driven microservices system processing 5M+ healthcare events daily. Designed distributed consumers and producers with fault-tolerance, dead-letter queues, and schema registry integration.",
-    metrics: ["5M+ Events/Day", "40–60 TPS"],
+    title: "Personal Fitness Tracker",
+    desc: "A full-stack daily fitness tracker built with React and Java Spring Boot. Tracks step count, food intake with macro breakdown, exercise completion, and water consumption",
+    metrics: ["14+ API Endpoints", "4 core modules"],
     stack: ["Apache Kafka", "Spring Boot", "Java 21", "AWS EKS", "Docker"],
   },
   {
     num: "03", accent: "#fbbf24",
-    title: "High-Performance Eligibility API",
-    desc: "Redesigned eligibility verification services with Redis caching layers, PostgreSQL query optimisation, and index tuning — achieving a 40% improvement in API response time for a high-traffic production system.",
-    metrics: ["↑ 40% Faster APIs", "10K+ Users"],
-    stack: ["Redis", "PostgreSQL", "Spring Boot", "Next.js", "AWS"],
+    title: "Hewlett Packard Enterprise - virtual Software Enginnering project  ",
+    desc: "Completed HPE's Software Engineering virtual job simulation on Forage — designing RESTful architecture, building a production-ready Java Spring Boot web server, and validating it with a comprehensive unit testing suite.",
+     metrics: ["RESTFUL Service Proposal - architecture design 7 Documentation", "Spring Boot web Server - HTTPS handling + JSON Data Upload","Unit Testing Suite - Validation, Performance, Reliability"],
+    stack: ["Java", "Spring Boot", "RESTAPI","JUnit", "Unit Testing"],
   },
   {
     num: "04", accent: "#34d399",
     title: "Banking Transaction Platform",
     desc: "Full-stack banking applications at Truist Bank with React/Redux frontends for transaction management and payment scheduling, backed by Spring Boot microservices processing millions of daily financial transactions.",
-    metrics: ["↑ 35% DB Perf.", "↓ 40% Deploy Time"],
-    stack: ["React", "Redux", "Spring Boot", "PostgreSQL", "OAuth2"],
+    metrics: ["RESTFUL Service Proposal - architecture design 7 Documentation", "Spring Boot web Server - HTTPS handling + JSON Data Upload","Unit Testing Suite - Validation, Performance, Reliability"],
+    stack: ["Java", "Spring Boot", "RESTAPI","JUnit", "Unit Testing"],
   },
 ];
 
