@@ -22,7 +22,7 @@ const HIGHLIGHTS = [
 
 const EXPERIENCE = [
   {
-    company: "FedEx", role: "Software Engineer",
+    company: "FedEx", logo: "https://logo.clearbit.com/fedex.com", role: "Software Engineer",
     period: "April 2026 – Present", location: "Atlanta, GA", color: "#ff6200",
     bullets: [
       "Developed and maintained Java Spring Boot microservices powering core logistics APIs including package tracking, shipment scheduling, and delivery status enrichment — processing millions of events daily with sub-200ms response time SLAs.",
@@ -35,7 +35,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    company: "Humana", role: "AI Software Engineer",
+    company: "Humana", logo: "https://logo.clearbit.com/humana.com", role: "AI Software Engineer",
     period: "Jan 2024 – April 2026", location: "Louisville, KY (Remote)", color: "#00e5ff",
     bullets: [
       "Designed GenAI-powered healthcare workflows using AWS Bedrock, OpenAI APIs, RAG pipelines, and prompt orchestration — reducing manual data entry by 30%.",
@@ -48,7 +48,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    company: "Truist Bank", role: "Software Engineer",
+    company: "Truist Bank", logo: "https://logo.clearbit.com/truist.com", role: "Software Engineer",
     period: "Mar 2023 – Aug 2023", location: "Atlanta, GA", color: "#a78bfa",
     bullets: [
       "Developed React.js & Redux banking applications for transaction management, payment scheduling, and account workflows.",
@@ -59,7 +59,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    company: "Coforge", role: "Software Engineer",
+    company: "Coforge", logo: "https://logo.clearbit.com/coforge.com", role: "Software Engineer",
     period: "May 2021 – Jul 2022", location: "Hyderabad, India", color: "#fbbf24",
     bullets: [
       "Built responsive React.js digital banking applications for account management and payment workflows.",
@@ -464,7 +464,10 @@ function Experience() {
               <div style={{ position: "relative", marginBottom: "3rem" }}>
                 <div style={{ position: "absolute", left: "-2.35rem", top: 6, width: 12, height: 12, borderRadius: "50%", background: exp.color, border: "2px solid #08080e", boxShadow: `0 0 0 3px ${exp.color}30` }} />
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.3rem" }}>
-                  <span style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.2rem", fontWeight: 700 }}>{exp.company}</span>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                    <img src={exp.logo} alt={exp.company} style={{ width: 28, height: 28, borderRadius: 6, objectFit: "contain", background: "#fff", padding: "3px" }} onError={e => { e.currentTarget.style.display = "none"; }} />
+                    <span style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.2rem", fontWeight: 700 }}>{exp.company}</span>
+                  </div>
                   <span style={{ fontSize: "0.78rem", color: "#6b6b8f", background: "#1a1a24", border: "1px solid #2a2a3a", padding: "0.2rem 0.7rem", borderRadius: "100px", whiteSpace: "nowrap" }}>{exp.period}</span>
                 </div>
                 <div style={{ fontSize: "0.8rem", color: exp.color, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "0.2rem" }}>{exp.role}</div>
