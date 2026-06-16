@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 
 import PROFILE_IMG from "./assets/image.jpeg";
-import RESUME_PDF from "./assets/resume.pdf";
+import RESUME_PDF from "./assets/Bharat Chundru_Softwrae Engineer.pdf";
 
 
 /* ── DATA ─────────────────────────────────────────────── */
 const NAV = ["About", "Experience", "Skills", "Projects", "Startup", "Education", "Connect"];
 
 const STATS = [
-  { num: "3+", label: "Years Exp." },
+  { num: "4+", label: "Years Exp." },
   { num: "Tech Builder", label: "Tech" },
  
 ];
@@ -22,8 +22,21 @@ const HIGHLIGHTS = [
 
 const EXPERIENCE = [
   {
-    company: "Humana", role: "AI Full Stack Engineer",
-    period: "Jan 2024 – Present", location: "Louisville, KY (Remote)", color: "#00e5ff",
+    company: "FedEx", role: "Software Engineer",
+    period: "April 2026 – Present", location: "Atlanta, GA", color: "#ff6200",
+    bullets: [
+      "Developed and maintained Java Spring Boot microservices powering core logistics APIs including package tracking, shipment scheduling, and delivery status enrichment — processing millions of events daily with sub-200ms response time SLAs.",
+      "Built responsive React (Hooks, Redux) frontend components for FedEx internal operations dashboards, enabling real-time package visibility and workflow management for 5,000+ operations staff across regional hubs.",
+      "Integrated OpenAI-based AI recommendations into the shipment routing system, leveraging prompt engineering and lightweight RAG patterns to surface intelligent route suggestions, reducing manual dispatch decisions by 20%.",
+      "Designed and optimized RESTful APIs for cross-functional integration between tracking, billing, and customer notification services, improving inter-service data consistency and reducing downstream errors by 25%.",
+      "Applied PostgreSQL query optimization and Redis caching strategies to shipment lookup services, achieving a 35% reduction in average API response times under high-concurrency peak shipping periods (Q4 holiday season).",
+      "Secured logistics APIs using OAuth2 and JWT with role-based access control, ensuring compliant, least-privilege access to sensitive shipment and customer PII data across 6+ services.",
+      "Implemented CI/CD pipelines using Jenkins and GitHub Actions for automated build, test, and deployment of microservices to AWS EKS, cutting release cycle time by 40% and improving deployment reliability across logistics service environments.",
+    ],
+  },
+  {
+    company: "Humana", role: "AI Software Engineer",
+    period: "Jan 2024 – April 2026", location: "Louisville, KY (Remote)", color: "#00e5ff",
     bullets: [
       "Designed GenAI-powered healthcare workflows using AWS Bedrock, OpenAI APIs, RAG pipelines, and prompt orchestration — reducing manual data entry by 30%.",
       "Built scalable Java Spring Boot microservices supporting healthcare claims & eligibility systems processing 40–60 TPS under peak production.",
@@ -35,7 +48,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    company: "Truist Bank", role: "Full Stack Software Engineer",
+    company: "Truist Bank", role: "Software Engineer",
     period: "Mar 2023 – Aug 2023", location: "Atlanta, GA", color: "#a78bfa",
     bullets: [
       "Developed React.js & Redux banking applications for transaction management, payment scheduling, and account workflows.",
@@ -310,10 +323,10 @@ function Hero({ onResumeOpen }) {
               <span style={{ background: "linear-gradient(135deg,#00e5ff,#7c3aed)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Chundru</span>
             </h1>
             <p style={{ ...anim(0.32), fontSize: "1rem", color: "#6b6b8f", fontWeight: 300, marginBottom: "1.6rem", letterSpacing: "0.02em" }}>
-              AI Full Stack Engineer &nbsp;·&nbsp; <span style={{ color: "#fbbf24", fontWeight: 500 }}>AWS · Java · React · GenAI</span>
+              Software Engineer &nbsp;·&nbsp; <span style={{ color: "#fbbf24", fontWeight: 500 }}>AWS · Java · React · GenAI</span>
             </p>
             <p style={{ ...anim(0.42), fontSize: "0.95rem", color: "#a0a0c0", lineHeight: 1.85, maxWidth: 560, marginBottom: "2.2rem" }}>
-              Building scalable cloud-native systems and GenAI-powered workflows in healthcare and banking. 3+ years delivering enterprise software that processes millions of transactions daily.
+              Building scalable cloud-native systems and GenAI-powered workflows in healthcare and banking. 4+ years delivering enterprise software that processes millions of transactions daily.
             </p>
             <div style={{ ...anim(0.52), display: "flex", gap: "0.9rem", flexWrap: "wrap" }}>
               <a href="#connect" onClick={e => { e.preventDefault(); document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" }); }}
@@ -353,8 +366,8 @@ function Hero({ onResumeOpen }) {
              <img src={PROFILE_IMG} alt="Bharat Chundru" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
             </div>
             <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.05rem", fontWeight: 700, marginBottom: "0.25rem" }}>Bharat Chundru</h3>
-            <p style={{ fontSize: "0.75rem", color: "#00e5ff", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "1.4rem" }}>AI Full Stack Engineer</p>
-            {[["📍", "Atlanta, GA"], ["✉️", "bharatchundru1@gmail.com"], ["📞", "217-953-5539"], ["🏢", "Humana (Remote)"]].map(([icon, val]) => (
+            <p style={{ fontSize: "0.75rem", color: "#00e5ff", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "1.4rem" }}>AI Software Engineer</p>
+            {[["📍", "Atlanta, GA"], ["✉️", "bharatchundru1@gmail.com"], ["📞", "217-953-5539"], ["🏢", "FedEx (Remote)"]].map(([icon, val]) => (
               <div key={val} style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "0.78rem", color: "#6b6b8f", marginBottom: "0.6rem" }}>
                 <span style={{ color: "#00e5ff", width: 16 }}>{icon}</span>{val}
               </div>
@@ -389,10 +402,12 @@ function About({ onResumeOpen }) {
               <img src={PROFILE_IMG} alt="Bharat Chundru" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} />
             </div>
             <p style={{ color: "#a0a0c0", marginBottom: "1.2rem", fontSize: "0.92rem", lineHeight: 1.85 }}>
-              I'm a Full Stack Software Engineer with 3+ years of experience designing scalable cloud-native applications across healthcare and banking. Currently at <strong style={{ color: "#e8e8f0" }}>Humana</strong>, I architect GenAI-powered workflows that reduce manual workload while keeping enterprise-grade security and HIPAA compliance front and center.
+              I'm a AI Software Engineer with 4+ years of experience designing scalable cloud-native applications across healthcare and banking. Currently at <strong style={{ color: "#e8e8f0" }}>FedEX</strong>,I build scalable logistics and supply chain solutions that improve shipment visibility, operational efficiency, and data-driven decision-making across global transportation networks.
+
+My expertise spans Java Spring Boot microservices processing millions of shipment and tracking events, React-based operational dashboards, AI-powered routing and recommendation systems, and cloud-native infrastructure deployed on AWS. I leverage Kafka, PostgreSQL, Redis, Kubernetes, and modern CI/CD practices to deliver secure, high-performance applications that support real-time logistics operations at scale.
             </p>
             <p style={{ color: "#a0a0c0", marginBottom: "1.2rem", fontSize: "0.92rem", lineHeight: 1.85 }}>
-              My stack spans event-driven microservices processing <strong style={{ color: "#e8e8f0" }}>5M+ healthcare events daily</strong> with Apache Kafka, high-performance React frontends, and cloud infrastructure automated via AWS CDK and CI/CD pipelines.
+              My stack spans event-driven microservices processing <strong style={{ color: "#e8e8f0" }}>Millios of events processing daily</strong> with Apache Kafka, high-performance React frontends, and cloud infrastructure automated via AWS CDK and CI/CD pipelines.
             </p>
             {/* Buttons row */}
             <div style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap", marginBottom: "1.8rem" }}>
@@ -1268,7 +1283,7 @@ function Connect() {
 function Footer() {
   return (
     <footer style={{ borderTop: "1px solid #1e1e2e", padding: "1.8rem", textAlign: "center", fontSize: "0.78rem", color: "#6b6b8f" }}>
-      Built with ♥ &nbsp;·&nbsp; <span style={{ color: "#00e5ff" }}>Bharat Chundru</span> &nbsp;·&nbsp; Full Stack Engineer &nbsp;·&nbsp; Atlanta, GA
+      Built with ♥ &nbsp;·&nbsp; <span style={{ color: "#00e5ff" }}>Bharat Chundru</span> &nbsp;·&nbsp; Software Engineer &nbsp;·&nbsp; Atlanta, GA
     </footer>
   );
 }
