@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 import PROFILE_IMG from "./assets/image.jpeg";
-import RESUME_PDF from "./assets/Bharat Chundru_Softwrae Engineer.pdf";
+import RESUME_PDF from "./assets/Resume.pdf";
 
 
 /* ── DATA ─────────────────────────────────────────────── */
@@ -23,7 +23,7 @@ const HIGHLIGHTS = [
 const EXPERIENCE = [
   {
     company: "FedEx", logo: "https://logo.clearbit.com/fedex.com", role: "Software Engineer",
-    period: "April 2026 – Present", location: "Atlanta, GA", color: "#ff6200",
+    period: "Feb 2026 – Present", location: "Atlanta, GA", color: "#ff6200",
     bullets: [
       "Developed and maintained Java Spring Boot microservices powering core logistics APIs including package tracking, shipment scheduling, and delivery status enrichment — processing millions of events daily with sub-200ms response time SLAs.",
       "Built responsive React (Hooks, Redux) frontend components for FedEx internal operations dashboards, enabling real-time package visibility and workflow management for 5,000+ operations staff across regional hubs.",
@@ -36,7 +36,7 @@ const EXPERIENCE = [
   },
   {
     company: "Humana", logo: "https://logo.clearbit.com/humana.com", role: "AI Software Engineer",
-    period: "Jan 2024 – April 2026", location: "Louisville, KY (Remote)", color: "#00e5ff",
+    period: "Jan 2024 – Feb 2026", location: "Louisville, KY (Remote)", color: "#00e5ff",
     bullets: [
       "Designed GenAI-powered healthcare workflows using AWS Bedrock, OpenAI APIs, RAG pipelines, and prompt orchestration — reducing manual data entry by 30%.",
       "Built scalable Java Spring Boot microservices supporting healthcare claims & eligibility systems processing 40–60 TPS under peak production.",
@@ -58,7 +58,8 @@ const EXPERIENCE = [
       "Implemented CI/CD pipelines with GitHub Actions, reducing deployment times by 40%.",
     ],
   },
-  {
+ /* {
+    
     company: "Coforge", logo: "https://logo.clearbit.com/coforge.com", role: "Software Engineer",
     period: "May 2021 – Jul 2022", location: "Hyderabad, India", color: "#fbbf24",
     bullets: [
@@ -68,7 +69,7 @@ const EXPERIENCE = [
       "Optimised MongoDB schemas and indexing, improving query performance by 30% under concurrent workloads.",
       "Automated CI/CD with Jenkins and AWS, reducing release cycles and improving deployment consistency.",
     ],
-  },
+  },*/
 ];
 
 const SKILL_GROUPS = [
@@ -367,7 +368,7 @@ function Hero({ onResumeOpen }) {
             </div>
             <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.05rem", fontWeight: 700, marginBottom: "0.25rem" }}>Bharat Chundru</h3>
             <p style={{ fontSize: "0.75rem", color: "#00e5ff", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "1.4rem" }}>AI Software Engineer</p>
-            {[["📍", "Atlanta, GA"], ["✉️", "bharatchundru1@gmail.com"], ["📞", "217-953-5539"], ["🏢", "FedEx (Remote)"]].map(([icon, val]) => (
+            {[["📍", "Atlanta, GA"], ["✉️", "bharatchundru1@gmail.com"], ["📞", "+1 217-953-5539 | +91 9492485333"], ["🏢", "FedEx (Remote)"]].map(([icon, val]) => (
               <div key={val} style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "0.78rem", color: "#6b6b8f", marginBottom: "0.6rem" }}>
                 <span style={{ color: "#00e5ff", width: 16 }}>{icon}</span>{val}
               </div>
@@ -402,7 +403,7 @@ function About({ onResumeOpen }) {
               <img src={PROFILE_IMG} alt="Bharat Chundru" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }} />
             </div>
             <p style={{ color: "#a0a0c0", marginBottom: "1.2rem", fontSize: "0.92rem", lineHeight: 1.85 }}>
-              I'm a AI Software Engineer with 4+ years of experience designing scalable cloud-native applications across healthcare and banking. Currently at <strong style={{ color: "#e8e8f0" }}>FedEX</strong>,I build scalable logistics and supply chain solutions that improve shipment visibility, operational efficiency, and data-driven decision-making across global transportation networks.
+              I'm a AI Software Engineer with 3+ years of experience designing scalable cloud-native applications across healthcare and banking. Currently at <strong style={{ color: "#e8e8f0" }}>FedEX</strong>,I build scalable logistics and supply chain solutions that improve shipment visibility, operational efficiency, and data-driven decision-making across global transportation networks.
 
 My expertise spans Java Spring Boot microservices processing millions of shipment and tracking events, React-based operational dashboards, AI-powered routing and recommendation systems, and cloud-native infrastructure deployed on AWS. I leverage Kafka, PostgreSQL, Redis, Kubernetes, and modern CI/CD practices to deliver secure, high-performance applications that support real-time logistics operations at scale.
             </p>
@@ -1069,7 +1070,7 @@ function Connect() {
   const links = [
     { icon: "🔗", label: "LinkedIn", value: "in/bharatchundru", href: "https://www.linkedin.com/in/bharatchundru", bg: "rgba(10,102,194,0.15)" },
     { icon: "✉️", label: "Email", value: "bharatchundru1@gmail.com", href: "mailto:bharatchundru1@gmail.com", bg: "rgba(0,229,255,0.08)" },
-    { icon: "📞", label: "Phone", value: "217-953-5539", href: "tel:+12179535539", bg: "rgba(34,197,94,0.08)" },
+    { icon: "📞", label: "Phone", value: "+1 217-953-5539 | +91 9492485333", href: "tel:+12179535539", bg: "rgba(34,197,94,0.08)" },
     { icon: "📍", label: "Location", value: "Atlanta, GA", href: null, bg: "rgba(245,158,11,0.08)" },
   ];
 
