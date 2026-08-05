@@ -8,7 +8,7 @@ import RESUME_PDF from "./assets/Resume.pdf";
 const NAV = ["About", "Experience", "Skills", "Projects", "Startup", "Education", "Connect"];
 
 const STATS = [
-  { num: "4+", label: "Years Exp." },
+  { num: "3+", label: "Years Exp." },
   { num: "Tech Builder", label: "Tech" },
  
 ];
@@ -327,7 +327,7 @@ function Hero({ onResumeOpen }) {
               Software Engineer &nbsp;·&nbsp; <span style={{ color: "#fbbf24", fontWeight: 500 }}>AWS · Java · React · GenAI</span>
             </p>
             <p style={{ ...anim(0.42), fontSize: "0.95rem", color: "#a0a0c0", lineHeight: 1.85, maxWidth: 560, marginBottom: "2.2rem" }}>
-              Building scalable cloud-native systems and GenAI-powered workflows in healthcare and banking. 4+ years delivering enterprise software that processes millions of transactions daily.
+              Building scalable cloud-native systems and GenAI-powered workflows in healthcare and banking. 3+ years delivering enterprise software that processes millions of transactions daily.
             </p>
             <div style={{ ...anim(0.52), display: "flex", gap: "0.9rem", flexWrap: "wrap" }}>
               <a href="#connect" onClick={e => { e.preventDefault(); document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" }); }}
@@ -368,7 +368,7 @@ function Hero({ onResumeOpen }) {
             </div>
             <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: "1.05rem", fontWeight: 700, marginBottom: "0.25rem" }}>Bharat Chundru</h3>
             <p style={{ fontSize: "0.75rem", color: "#00e5ff", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "1.4rem" }}>AI Software Engineer</p>
-            {[["📍", "Atlanta, GA"], ["✉️", "bharatchundru1@gmail.com"], ["📞", "+1 217-953-5539 | +91 9492485333"], ["🏢", "FedEx (Remote)"]].map(([icon, val]) => (
+            {[["📍", "Hyberabad"], ["✉️", "bharatchundru1@gmail.com"], ["📞", " +91 9492485333"], ["🏢", "FedEx (Remote)"]].map(([icon, val]) => (
               <div key={val} style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "0.78rem", color: "#6b6b8f", marginBottom: "0.6rem" }}>
                 <span style={{ color: "#00e5ff", width: 16 }}>{icon}</span>{val}
               </div>
@@ -1070,8 +1070,8 @@ function Connect() {
   const links = [
     { icon: "🔗", label: "LinkedIn", value: "in/bharatchundru", href: "https://www.linkedin.com/in/bharatchundru", bg: "rgba(10,102,194,0.15)" },
     { icon: "✉️", label: "Email", value: "bharatchundru1@gmail.com", href: "mailto:bharatchundru1@gmail.com", bg: "rgba(0,229,255,0.08)" },
-    { icon: "📞", label: "Phone", value: "+1 217-953-5539 | +91 9492485333", href: "tel:+12179535539", bg: "rgba(34,197,94,0.08)" },
-    { icon: "📍", label: "Location", value: "Atlanta, GA", href: null, bg: "rgba(245,158,11,0.08)" },
+    { icon: "📞", label: "Phone", value: "+91 9492485333", href: "tel:+12179535539", bg: "rgba(34,197,94,0.08)" },
+    { icon: "📍", label: "Location", value: "Hyderabad", href: null, bg: "rgba(245,158,11,0.08)" },
   ];
 
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -1287,7 +1287,7 @@ function Connect() {
 function Footer() {
   return (
     <footer style={{ borderTop: "1px solid #1e1e2e", padding: "1.8rem", textAlign: "center", fontSize: "0.78rem", color: "#6b6b8f" }}>
-      Built with ♥ &nbsp;·&nbsp; <span style={{ color: "#00e5ff" }}>Bharat Chundru</span> &nbsp;·&nbsp; Software Engineer &nbsp;·&nbsp; Atlanta, GA
+      Built with ♥ &nbsp;·&nbsp; <span style={{ color: "#00e5ff" }}>Bharat Chundru</span> &nbsp;·&nbsp; Software Engineer &nbsp;·&nbsp; Hyberabad
     </footer>
   );
 }
